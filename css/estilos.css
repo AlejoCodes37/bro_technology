@@ -8,17 +8,14 @@
 }
 
 body {
-    background-color: #61366d;
-    opacity: 1;
-    background-image: radial-gradient(circle at center center, #7c2cd2, #61366d), repeating-radial-gradient(circle at center center, #7c2cd2, #7c2cd2, 4px, transparent 8px, transparent 4px);
-    background-blend-mode: multiply;
+    background-image: radial-gradient(circle at -11.24% 14.64%, #003654 0, #003559 5%, #00345e 10%, #003361 15%, #003164 20%, #002f65 25%, #002d65 30%, #002a63 35%, #0a2761 40%, #23235e 45%, #321f59 50%, #3d1a54 55%, #46154d 60%, #4d0f47 65%, #53093f 70%, #570438 75%, #5a0130 80%, #5b0028 85%, #5c0120 90%, #5b0419 95%, #590911 100%);
 }
 
 header {
     width: 100%;
     height: 6vh;
     display: grid;
-    background: linear-gradient(to right, rgb(7, 0, 43), rgb(49, 4, 84));
+    background-image: radial-gradient(circle at -11.24% 14.64%, #003654 0, #003559 5%, #00345e 10%, #003361 15%, #003164 20%, #002f65 25%, #002d65 30%, #002a63 35%, #0a2761 40%, #23235e 45%, #321f59 50%, #3d1a54 55%, #46154d 60%, #4d0f47 65%, #53093f 70%, #570438 75%, #5a0130 80%, #5b0028 85%, #5c0120 90%, #5b0419 95%, #590911 100%);
     position: fixed;
     z-index: 10;
 }
@@ -37,7 +34,7 @@ nav {
     margin-top: 7px;
     margin-left: 30px;
     font-size: 30px;
-    background: linear-gradient(to right, rgb(85, 55, 254), rgb(181, 107, 237));
+    background: #fff;
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -232,7 +229,8 @@ nav {
 
 .footer {
     width: 100%;
-    background-color: rgb(48, 1, 96);
+    border-top: 1px solid rgba(255, 255, 255, 0.486) ;
+    background-image: radial-gradient(circle at -11.24% 14.64%, #003654 0, #003559 5%, #00345e 10%, #003361 15%, #003164 20%, #002f65 25%, #002d65 30%, #002a63 35%, #0a2761 40%, #23235e 45%, #321f59 50%, #3d1a54 55%, #46154d 60%, #4d0f47 65%, #53093f 70%, #570438 75%, #5a0130 80%, #5b0028 85%, #5c0120 90%, #5b0419 95%, #590911 100%);
     height: 100px;
     bottom: 0;
     display: grid;
@@ -313,6 +311,78 @@ nav {
     40% {
         transform: rotate(-15deg);
     }
+}
+
+.flip-card{
+    background-color: transparent;
+    width: 300px;
+    height: 300px;
+    perspective: 1000px;
+}
+
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+}
+
+.flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    border-radius: 16px;
+}
+
+.flip-card-front {
+    background-image: 
+    linear-gradient(
+        45deg, #6f04d9, #d9048e
+    );
+}
+
+.flip-card-front img{
+    width: 280px;
+    margin-top: 1rem;
+}
+
+.flip-card-back {
+    background-image: 
+    linear-gradient(
+        315deg, #6f04d9, #d9048e
+    );
+    color: white;
+    transform: rotateY(180deg);
+}
+
+.flip-card-back img {
+    width: 150px;
+    margin-top: 0.5rem;
+}
+
+.flip-card-back h3 {
+    margin-bottom: 0.3rem;
+}
+
+.flip-card-back h1 {
+    margin: 0;
+    margin-bottom: 0.9rem;
+}
+.producto{
+    width: 100%;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    padding-left: 150px;
+    margin-top: 50px;
+    margin-bottom: 50px;
 }
 
 @media(max-width: 768px){
